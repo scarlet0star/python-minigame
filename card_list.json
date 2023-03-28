@@ -1,0 +1,56 @@
+
+{
+    "1":{
+        "id": 1,
+        "name": "주먹질",
+        "action": 1,
+        "minV": 2,
+        "maxV": 3,
+        "effect": "-"
+    },
+
+    "2":{
+        "id": 2,
+        "name": "발길질",
+        "action": 2,
+        "minV": 3,
+        "maxV": 4,
+        "effect": "-"
+    },
+
+    "3":{
+        "id": 3,
+        "name": "날라차기",
+        "action": 3,
+        "minV": 1,
+        "maxV": 9,
+        "effect": "-"
+    },
+
+    "4":{
+        "id": 4,
+        "name": "돌진",
+        "action": 1,
+        "minV": 2,
+        "maxV": 3,
+        "effect": "-"
+    },
+
+    "5":{
+        "id": 5,
+        "name": "연타",
+        "action": 2,
+        "minV": 2,
+        "maxV": 6,
+        "effect": "-"
+    },
+
+    "6":{
+        "id": 6,
+        "name": "박치기",
+        "action": 1,
+        "minV": 4,
+        "maxV": 2,
+        "effect": "-"
+    }
+}
