@@ -1,3 +1,6 @@
+# 카드를 장비하는 class equip입니다.
+# 카드를 추가하는 함수, 장비된 카드의 갯수를 체크하는 함수, 장착된 카드들을 출력하는 함수들이 있습니다. 
+
 class Equip:
     def __init__(self):
         self.max = 9

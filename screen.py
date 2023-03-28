@@ -27,12 +27,17 @@ battle_select = ["[ 고통스러워 하는 개발자 ]",
                  "[ 비슷한 상대 ]"]
 
 
+# 스테이지 넘버를 받아 특정 스테이지의 텍스트를 출력합니다.
+# return으로 해당 stage의 선택지 텍스트를 리턴합니다.
+
 def screen_output(stage_num):
     stage_text = stage[stage_num]
     print(stage_text["text"] if stage_text["text"] != None else "")
 
     return stage_text["select"]
 
+# 리턴된 선택지 리스트를 받아와서 하나씩 출력합니다.유저의 input을 리턴받습니다. 
+# 이때 리스트 혹은 문자열 판별을 isinstance를 이용합니다. 이후 출력을 따로 받습니다.
 
 def get_user_input(select):
     if isinstance(select, list):
@@ -48,6 +53,7 @@ def get_user_input(select):
 
     return user_input
 
+# 시작 스테이지의 선택지 로직입니다. 선택지 로직은 보통 스테이지 넘버를 리턴합니다.
 
 def start_stage(choice, mainState):
     if choice == 1:
@@ -96,6 +102,8 @@ def equip_info(choice, mainState):
     print(mainState.user.equip)
     return 3
 
+# main.py에서 적을 생성하기 힘들어서 stage.py에서 선택지에 따라 적도 생성합니다
+# 적을 생성한 이후 전투로 넘어갑니다. battle이 끝나면 다시 메인 선택지(3)으로 넘어갑니다.
 
 def battle_stage(choice, mainState):
     enemy = Character(card_instances=create_card_instance(
@@ -105,6 +113,8 @@ def battle_stage(choice, mainState):
     battle.battle(mainState.user, enemy)
     return 3
 
+# 스테이지 정보를 담고있는 딕셔너리입니다. logic에 함수를 담아 main.py에서 불러올 수 있습니다.
+# python에서는 함수 역시 1급 객체이기에 가능한 일입니다. 
 
 stage = {
     0: {"text": start,

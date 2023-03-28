@@ -1,5 +1,8 @@
 from equip import Equip
 
+# 캐릭터 클래스입니다.
+# 초기 카드 정보를 초기화할때 json의 초기 카드 id 리스트를 받아와 equip 내의 card 리스트를 구성합니다.
+# __str__을 통해 캐릭터의 정보를 출력할 수 있습니다.
 
 class Character():
 

@@ -1,3 +1,6 @@
+# 카드의 초기화와 출력 그리고 특수 효과에 대한 구현이 있습니다.
+# 현재까지 특수효과를 구현하지는 않았지만 card_effect를 통해 특수 효과를 넘겨줍니다.
+
 class Card:
     def __init__(self, **kwargs):
         self.id = kwargs.get("id", 0)
